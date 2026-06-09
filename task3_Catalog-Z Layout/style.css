@@ -1,0 +1,716 @@
+/* ═══════════════════════════
+   RESET & BASE
+═══════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #444;
+  background: #fff;
+}
+
+ul { list-style: none; }
+
+/* ═══════════════════════════
+   TOP NAVIGATION
+═══════════════════════════ */
+/* Reset for links */
+a { text-decoration: none; color: inherit; }
+
+/* ===================== TOP NAV ===================== */
+.top-nav {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-inner {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+/* ===================== BRAND / LOGO ===================== */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.brand:hover {
+    color: #009999;
+}
+
+/* Logo Image */
+.brand-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: all 0.6s ease;
+}
+
+/* Change logo on hover */
+.brand:hover .brand-logo {
+    content: url("./image_assets/logo2.PNG");
+}
+
+/* Brand Name */
+.brand-name {
+    font-size: 25px;
+    letter-spacing: -0.5px;
+    color: #3399cc;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.brand:hover .brand-name {
+    color: #009999;
+}
+
+/* ===================== NAV LINKS ===================== */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    font-size: 16.5px;
+    color: #555;
+    padding: 8px 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #2e9da8;
+}
+
+
+/* Underline effect on hover */
+/* Base underline for all links */
+.nav-links li a {
+    font-size: 17.5px;
+    color: #555;
+    padding: 8px 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Default hover underline */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 16px;
+    width: 0;
+    height: 5px;
+    background: #33CCFF;           /* Default color (Photos) */
+    transition: width 0.3s ease;
+}
+
+/* Individual colors on hover */
+.nav-links li a.videos::after {
+    background: #FF3366;
+}
+
+.nav-links li a.about::after {
+    background: #33CC66;
+}
+
+.nav-links li a.contact::after {
+    background: #CC66CC;
+}
+
+/* Hover effect - expand underline */
+.nav-links li a:hover::after {
+    width: calc(100% - 32px);
+}
+
+/* ===================== ACTIVE STATE ===================== */
+
+/* Active link color */
+.nav-links li a.active {
+    color: #222;
+    font-weight: 600;
+}
+
+/* Active underline with matching color */
+.nav-links li a.active::after {
+    width: calc(100% - 32px);     /* Full underline when active */
+    transition: none;
+}
+
+/* Individual active colors */
+.nav-links li a.photos.active::after,
+.nav-links li a.active.photos::after {
+    background: #33CCFF;
+}
+
+.nav-links li a.videos.active::after {
+    background: #FF3366;
+}
+
+.nav-links li a.about.active::after {
+    background: #33CC66;
+}
+
+.nav-links li a.contact.active::after {
+    background: #CC66CC;
+}
+
+/* ===================== HAMBURGER & MOBILE MENU ===================== */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 10px 30px;
+    list-style: none;
+}
+
+.mobile-menu li a {
+    display: block;
+    padding: 12px 0;
+    color: #444;
+    font-size: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-menu li a:hover,
+.mobile-menu li a.active {
+    color: #2e9da8;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: none;
+    }
+    
+    .mobile-menu.open {
+        display: flex;
+    }
+    
+    .brand-logo {
+        width: 34px;
+        height: 34px;
+    }
+    
+    .brand-name {
+        font-size: 20px;
+    }
+}
+/* ═══════════════════════════
+   HERO BANNER
+   Full-width fixed background (pelican/water scene)
+   Shows on just the hero strip
+═══════════════════════════ */
+.hero-banner {
+    width: 100%;
+    height: 400px;                    /* You can increase this if needed */
+    background-image: url('./image_assets/hero.jpg');
+    background-size: cover;
+    background-position: center 40% ;   /* ← Uplifted */
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;               /* Helpful if you add overlay */
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 420px;
+    max-width: 100%;
+    border: 2px solid #8dd3e0;           /* Light teal border */
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.search-box:focus-within {
+    border-color: #2e9da8;               /* Brighter teal on focus */
+    box-shadow: 0 8px 20px rgba(46, 157, 168, 0.25);
+    outline: none;
+}
+
+.search-box input {
+    flex: 1;
+    height: 48px;
+    padding: 0 18px;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #2e9da8;
+}
+
+.search-box input::placeholder {
+    color: #2e9da8;
+    opacity: 0.85;
+}
+
+.search-box button {
+    height: 48px;
+    width: 90px;
+    background: #2e9da8;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease ;
+}
+
+.search-box button:hover {
+    background: #247f89;
+}
+
+/* Optional: Make it even closer to the image */
+.search-box input:focus {
+    background: #f8fffe;
+}
+
+/* ═══════════════════════════
+   MAIN CONTENT — full width
+═══════════════════════════ */
+.main-content {
+  width: 100%;
+  background: #fff;
+  padding: 30px 20px 50px 20px;
+}
+
+/* Content header row */
+.content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  font-size: 30px;
+  font-weight: 600;
+  color: #2e9da8;
+}
+
+.page-info {
+  font-size: 13px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.page-info strong { color: #555; font-weight: 600; }
+
+/* Page number input box (matches original) */
+.page-input {
+  width: 34px;
+  height: 26px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background: #fff;
+  outline: none;
+}
+
+/* ═══════════════════════════
+   PHOTO GRID — 4 columns, full width
+═══════════════════════════ */
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap:0;
+  width: 100%;
+}
+
+.photo-item {
+  flex: 0 0 25%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 20px 0;
+}
+
+/* Padding between items — gap using padding trick */
+.photo-item:nth-child(4n+2),
+.photo-item:nth-child(4n+3),
+.photo-item:nth-child(4n+4) {
+  padding-left: 12px;
+}
+
+/* Photo thumbnail */
+.photo-thumb {
+  position: relative;
+  width: 100%;
+  padding-top: 52%; /* aspect ratio ~1.6:1 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* ─── HOVER EFFECT ───
+   White semi-transparent overlay fades in
+   White border appears inside
+   Photo title appears centered
+*/
+.photo-thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Image zoom */
+.photo-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+    z-index: 0;
+}
+
+/* Dark overlay */
+.photo-thumb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(40, 45, 55, 0.55);
+    opacity: 0 ;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+.photo-overlay::before{
+      background: rgba(40, 45, 55, 0.55);
+}
+
+/* Hover effects */
+.photo-thumb:hover::before {
+    opacity: 1;
+}
+
+.photo-thumb:hover::after {
+    transform: scale(1.08);
+}
+
+/* Overlay container */
+.photo-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* White border animation */
+.photo-overlay::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    right: 40px;
+    bottom: 30px;
+    border: 2px solid #fff;
+
+    transform: scale(0.9);
+    opacity: 0;
+
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease;
+}
+
+.photo-thumb:hover .photo-overlay::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Title animation */
+.photo-title {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.photo-thumb:hover .photo-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+figcaption{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4%;
+  color: #888;
+}
+/* ═══════════════════════════
+   PAGINATION
+═══════════════════════════ */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 0 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-page {
+  background: #2e9da8;
+  color: #fff;
+  border: none;
+  padding: 20px 30px;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-page:hover { background: #247f89; }
+
+.btn_prev:disabled {
+  background-color: #ccc;
+  opacity: 0.5;
+  pointer-events: none;     /* Makes it completely unclickable */
+}
+
+.page-numbers {
+  display: flex;
+  gap: 20px;
+}
+
+.page-btn {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ddd;
+  background: #EEEEEE;
+  color: #999;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.page-btn:hover {
+  background: #2e9da8;
+  color: #fff;
+  border-color: #2e9da8;
+}
+
+/* Teal filled = active (pages 1 and 3 in screenshot) */
+.page-btn.active,
+.page-btn.active-alt {
+  background: #2e9da8;
+  color: #fff;
+  border-color: #2e9da8;
+}
+
+/* ═══════════════════════════
+   FOOTER
+═══════════════════════════ */
+.site-footer { background: #f2f2f2; }
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr auto auto;  /* About | Links | Social+Terms */
+  gap: 0 80px;
+  padding: 44px 60px 36px 60px;
+  align-items: start;
+}
+
+/* About — left margin */
+.footer-about { padding-left: 40px; }
+.footer-about h4 { font-size: 20px; font-weight: 600; color: #2e9da8; margin-bottom: 14px; }
+.footer-about p { font-size: 13px; color: #888; line-height: 1.75; max-width: 400px; }
+.footer-about a { color: #2d08fe; text-decoration: none; }
+
+/* Our Links — center column */
+.footer-links-col h4 { font-size: 20px; font-weight: 600; color: #2e9da8; margin-bottom: 14px; }
+.footer-links-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-links-list li a { font-size: 13px; color: #888; text-decoration: none; transition: color 0.2s; }
+.footer-links-list li a:hover { color: #2e9da8; }
+
+/* Social icons + Terms/Privacy stacked right */
+.footer-social-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 20px;
+}
+.social-icons { display: flex; gap: 8px; margin-bottom: 24px; }
+.social-icons a {
+  width: 36px; height: 36px;
+  border: 1px solid #ccc; border-radius: 4px;
+  background: #fff; color: #666;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.social-icons a:hover { background: #2e9da8; color: #fff; border-color: #2e9da8; }
+
+.terms-links { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.terms-links a { font-size: 13px; color: #888; text-decoration: none; }
+.terms-links a:hover { color: #2e9da8; }
+
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding: 16px 60px 16px 100px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: #f2f2f2;
+}
+.footer-bottom p { font-size: 12px; color: #888; }
+.footer-bottom a { color: #2e9da8; text-decoration: none; }
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    padding: 30px 24px;
+    gap: 28px;
+  }
+
+  .footer-about {
+    width: 100%;
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-links-col { align-items: flex-start; text-align: left; }
+  .footer-terms { align-items: flex-start; }
+
+  .footer-social-col {
+    align-items: flex-start;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  .designed-by { text-align: left; }
+
+  .footer-bottom { padding: 14px 24px; }
+}
+/* ═══════════════════════════
+   RESPONSIVE
+═══════════════════════════ */
+
+/* Tablet — 2 columns */
+@media (max-width: 900px) {
+  .photo-item {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  .photo-item:nth-child(4n+2),
+  .photo-item:nth-child(4n+3),
+  .photo-item:nth-child(4n+4) {
+    padding-left: 0;
+  }
+
+  .photo-item:nth-child(odd) { padding-right: 6px; }
+  .photo-item:nth-child(even) { padding-left: 6px; }
+
+  .footer-inner { padding: 30px 24px; gap: 30px; }
+  .footer-bottom { padding: 14px 24px; }
+  .main-content { padding: 24px 16px 40px; }
+}
+
+/* Mobile — show hamburger */
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+
+  .photo-item {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  .hero-banner { height: 100px; }
+  .search-box { width: 88%; max-width: 360px; }
+
+  .pagination { justify-content: center; }
+  .btn-page { padding: 9px 16px; font-size: 12px; }
+
+  .footer-inner { flex-direction: column; gap: 24px; }
+  .footer-links-wrap { flex-direction: column; gap: 10px; }
+  .footer-bottom { flex-direction: column; align-items: center; text-align: center; }
+
+  .section-heading { font-size: 18px; }
+}
+
+/* Very small — 1 column */
+@media (max-width: 420px) {
+  .photo-item {
+    flex: 0 0 100%;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

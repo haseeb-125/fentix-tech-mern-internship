@@ -253,7 +253,7 @@ a { text-decoration: none; color: inherit; }
     overflow: hidden;
     
     /* Fixed Background Image */
-    background-image: url('./image_assets/hero.jpg');
+    background-image: url('https://templatemo.com/templates/templatemo_556_catalog_z/img/hero.jpg');
     background-size: contain;
     background-position: center 40%;     /* Adjust to show pelican nicely */
     background-attachment: fixed;        /* ← This makes it fixed on scroll */

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalog Z – Latest Photos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="video.css">
+</head>
+
+<body>
+
+  <!-- ══════════ TOP NAV ══════════ -->
+  <header class="top-nav">
+    <nav class="nav-inner">
+      <a href="index.html" class="brand">
+        <img src="./image_assets/logo1.PNG" alt="Catalog-Z Logo" class="brand-logo">
+        <span class="brand-name">Catalog-Z</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="photos">Photos</a></li>
+        <li><a class="active videos" href="videos.html">Videos</a></li>
+        <li><a class="about" href="About.html">About</a></li>
+        <li><a class="contact" href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <i class="fa fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="index.html" >Photos</a></li>
+      <li><a href="videos.html" class="active">Videos</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- ══════════ HERO BANNER ══════════
+       Full-width background image (pelican/water)
+       Search box centered
+  ══════════ -->
+  <section class="hero-banner">
+    <!-- Video Background -->
+    <video class="hero-bg-video" autoplay muted loop playsinline>
+      <source src="./image_assets/hero.mp4" type="video/mp4">
+      <!-- Fallback image -->
+      <img src="./image_assets/hero.jpg" alt="Hero Background" class="hero-fallback">
+    </video>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <div class="search-box">
+        <input type="text" placeholder="Search" />
+        <button type="button"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ MAIN CONTENT ══════════ -->
+  <main class="main-content">
+
+    <div class="content-header">
+      <h2 class="section-heading">Latest Photos</h2>
+      <span class="page-info">
+        Page <input type="text" class="page-input" value="1" readonly /> of <strong>200</strong>
+      </span>
+    </div>
+
+    <!-- Photo Grid — 4 columns full width -->
+    <div class="photo-grid">
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-03.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">CLOCKS</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>18 Oct 2020</span><span>9,906 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-04.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">PLANTS</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>14 Oct 2020</span><span>16,100 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-05.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">MORNING</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>12 Oct 2020</span><span>12,460 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-06.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">PINKEY</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>10 Oct 2020</span><span>11,402 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-01.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">HANGERS</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>24 Sep 2020</span><span>16,008 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-02.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">PERFUMES</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>20 Sep 2020</span><span>12,860 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-07.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">BUS</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>16 Sep 2020</span><span>10,900 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-08.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">NEW YORK</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>12 Sep 2020</span><span>11,300 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-09.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">ABSTRACT</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>10 Sep 2020</span><span>42,700 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-10.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">FLOWERS</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>8 Sep 2020</span><span>11,402 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-11.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">ROSY</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>4 Sep 2020</span><span>32,906 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-12.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">ROCKI</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>28 Aug 2020</span><span>50,700 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-13.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">PURPLE</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>22 Aug 2020</span><span>107,510 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-14.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">SEA</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>14 Aug 2020</span><span>118,006 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-15.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">TURTLE</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>9 Aug 2020</span><span>121,300 views</span></figcaption>
+      </figure>
+
+      <figure class="photo-item">
+        <div class="photo-thumb"
+          style="background-image:url('https://templatemo.com/templates/templatemo_556_catalog_z/img/img-16.jpg')">
+          <div class="photo-overlay">
+            <p class="photo-title">PEACE</p>
+          </div>
+        </div>
+        <figcaption class="photo-meta"><span>3 Aug 2020</span><span>21,204 views</span></figcaption>
+      </figure>
+
+    </div><!-- /photo-grid -->
+
+    <!-- Pagination -->
+    <nav class="pagination">
+      <button class="btn-page btn_prev" disabled>Previous</button>
+      <div class="page-numbers">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn ">3</button>
+        <button class="page-btn">4</button>
+      </div>
+      <button class="btn-page btn-next">Next Page</button>
+    </nav>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <!-- LEFT: About -->
+      <div class="footer-about">
+        <h4>About Catalog-Z</h4>
+        <p>Catalog-Z is free <a href="https://getbootstrap.com/">Bootstrap 5</a> Catalog-Z is free Bootstrap 5 Alpha 2
+          HTML Template for video and photo websites. You can freely use this TemplateMo layout for a front-end
+          integration with any kind of CMS website.</p>
+      </div>
+
+      <!-- CENTER: Our Links -->
+      <div class="footer-links-col">
+        <h4>Our Links</h4>
+        <ul class="footer-links-list">
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Our Company</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT: Social + Terms -->
+      <div class="footer-social-col">
+        <nav class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </nav>
+
+        <div class="footer-terms">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+      <p>Copyright 2020 Catalog-Z Company. All rights reserved.</p>
+      <p class="designed-by">Designed by <a href="#">TemplateMo</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+
+</body>
+
+</html>

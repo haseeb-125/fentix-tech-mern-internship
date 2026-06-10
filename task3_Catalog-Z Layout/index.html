@@ -13,20 +13,18 @@
 <body>
 
   <!-- ══════════ TOP NAV ══════════ -->
- <header class="top-nav">
+  <header class="top-nav">
     <nav class="nav-inner">
-      <a href="#" class="brand">
-        <img src="./image_assets/logo1.PNG" 
-             alt="Catalog-Z Logo" 
-             class="brand-logo">
+      <a href="index.html" class="brand">
+        <img src="./image_assets/logo1.PNG" alt="Catalog-Z Logo" class="brand-logo">
         <span class="brand-name">Catalog-Z</span>
       </a>
 
       <ul class="nav-links">
-        <li><a href="#" class="active photos">Photos</a></li>
-        <li><a class="videos" href="#">Videos</a></li>
-        <li><a class="about" href="#">About</a></li>
-        <li><a class="contact" href="#">Contact</a></li>
+        <li><a href="index.html" class="active photos">Photos</a></li>
+        <li><a class="videos" href="videos.html">Videos</a></li>
+        <li><a class="about" href="About.html">About</a></li>
+        <li><a class="contact" href="contact.html">Contact</a></li>
       </ul>
 
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -36,10 +34,10 @@
 
     <!-- Mobile Menu -->
     <ul class="mobile-menu" id="mobileMenu">
-      <li><a href="#" class="active">Photos</a></li>
-      <li><a href="#">Videos</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="index.html" class="active">Photos</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </header>
 
@@ -48,9 +46,11 @@
        Search box centered
   ══════════ -->
   <section class="hero-banner">
-    <div class="search-box">
-      <input type="text" placeholder="Search" />
-      <button type="button"><i class="fa fa-search"></i></button>
+    <div class="hero-content">
+      <div class="search-box">
+        <input type="text" placeholder="Search" />
+        <button type="button"><i class="fa fa-search"></i></button>
+      </div>
     </div>
   </section>
 
@@ -244,50 +244,51 @@
   </main>
 
   <!-- ══════════ FOOTER ══════════ -->
-<footer class="site-footer">
-  <div class="footer-inner">
+  <footer class="site-footer">
+    <div class="footer-inner">
 
-    <!-- LEFT: About -->
-    <div class="footer-about">
-      <h4>About Catalog-Z</h4>
-      <p>Catalog-Z is free <a href="#">Bootstrap 5</a> Alpha 2 HTML Template for video
-        and photo websites. You can freely use this TemplateMo layout for a front-end
-        integration with any kind of CMS website.</p>
-    </div>
-
-    <!-- CENTER: Our Links + Terms/Privacy below -->
-    <div class="footer-links-col">
-      <h4>Our Links</h4>
-      <ul class="footer-links-list">
-        <li><a href="#">Advertise</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Our Company</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- RIGHT: Social Icons + Designed by below -->
-    <div class="footer-social-col">
-      <nav class="social-icons">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-      </nav>
-      <div class="footer-terms">
-        <a href="#">Terms of Use</a>
-        <a href="#">Privacy Policy</a>
+      <!-- LEFT: About -->
+      <div class="footer-about">
+        <h4>About Catalog-Z</h4>
+        <p>Catalog-Z is free <a href="https://getbootstrap.com/">Bootstrap 5</a> Catalog-Z is free Bootstrap 5 Alpha 2
+          HTML Template for video and photo websites. You can freely use this TemplateMo layout for a front-end
+          integration with any kind of CMS website.</p>
       </div>
+
+      <!-- CENTER: Our Links -->
+      <div class="footer-links-col">
+        <h4>Our Links</h4>
+        <ul class="footer-links-list">
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Our Company</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT: Social + Terms -->
+      <div class="footer-social-col">
+        <nav class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </nav>
+
+        <div class="footer-terms">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+
     </div>
 
-  </div>
-
-  <!-- BOTTOM: Copyright (left aligned, under About) -->
-  <div class="footer-bottom">
-    <p>Copyright 2020 Catalog-Z Company. All rights reserved.</p>
-    <p class="designed-by">Designed by <a href="#">TemplateMo</a></p>
-  </div>
-</footer>
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+      <p>Copyright 2020 Catalog-Z Company. All rights reserved.</p>
+      <p class="designed-by">Designed by <a href="#">TemplateMo</a></p>
+    </div>
+  </footer>
 
   <script>
     document.getElementById('hamburger').addEventListener('click', function () {
@@ -298,4 +299,3 @@
 </body>
 
 </html>
-
